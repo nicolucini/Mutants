@@ -6,12 +6,12 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.web.context.WebApplicationContext;
 
 @SpringBootTest
 class MutantsApplicationTests {
+
 	@Autowired
-	private WebApplicationContext appContext;
+	MutantService mutantService;
 
 	@Test
 	void contextLoads() {
@@ -22,7 +22,6 @@ class MutantsApplicationTests {
 		//GIVEN
 		String[] dna = {"ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"};
 		Sequence sequence = new Sequence(dna);
-		MutantService mutantService = new MutantService();
 		//WHEN
 		Boolean isMutant = mutantService.resolveMutant(sequence);
 		//THEN
@@ -35,7 +34,6 @@ class MutantsApplicationTests {
 		//GIVEN
 		String[] dna = {"TTGCTA","CAGTGC","TTATGT","AGAAGG","TCCCTA","TCACTG"};
 		Sequence sequence = new Sequence(dna);
-		MutantService mutantService = new MutantService();
 		//WHEN
 		Boolean isMutant = mutantService.resolveMutant(sequence);
 		//THEN
