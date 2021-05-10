@@ -16,5 +16,5 @@ http://localhost:8080/mutant/
 
 
 Ejecucion remota:
-http://ec2-3-142-90-235.us-east-2.compute.amazonaws.com/mutant/
-http://ec2-3-142-90-235.us-east-2.compute.amazonaws.com/stats/
+metodo post: http://ec2-3-142-90-235.us-east-2.compute.amazonaws.com/mutant/
+metodo get: http://ec2-3-142-90-235.us-east-2.compute.amazonaws.com/stats/
